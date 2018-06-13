@@ -6,9 +6,7 @@ import { BikeService } from '../../services/bike.service';
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css']
 })
-
 export class AdminComponent implements OnInit {
-
   public bikes;
 
   constructor(private bikeService: BikeService) { }
@@ -19,7 +17,7 @@ export class AdminComponent implements OnInit {
 
   getBikes() {
     this.bikeService.getBikes().subscribe(
-      data => { this.bikes = data },
+      data => { this.bikes = data},
       err => console.error(err),
       () => console.log('bikes loaded')
     );
